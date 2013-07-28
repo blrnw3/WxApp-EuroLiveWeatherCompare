@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.uk.wxApp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:icon="@drawable/launch_icon1"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity
+            android:name=".views.SplitScreenAc"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.DetailWxAc"
+            android:label="@string/title_activity_detail_wx"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".views.HelpAc"
+            android:label="@string/title_activity_help" >
+        </activity>
+        <activity
+            android:name=".views.Prefs"
+            android:label="@string/title_prefs" >
+        </activity>
+
+        <service android:name=".models.UpdaterService" />
+
+        <activity
+            android:name=".views.Maptivity"
+            android:label="@string/title_activity_maptivity" >
+        </activity>
+        <activity
+            android:name=".views.RankAc"
+            android:label="@string/title_activity_rank" 
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>
