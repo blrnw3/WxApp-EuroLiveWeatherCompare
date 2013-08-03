@@ -78,6 +78,7 @@ while($row = mysql_fetch_assoc($result)) {
 	$keys = array(4, 7, 1, 5, 6);
 	if($cityName == 'Hampstead') { // Special case for my weather station in Hampstead, North London
 		$client = file("/home/nwweathe/public_html/clientraw.txt");
+		$client[7] = ceil($client[7]);
 		$nw3_icon = getIconNum( get_nw3_wxicon(), 51.5, 0 );
 		
 		$live = explode(" ", $client[0]);

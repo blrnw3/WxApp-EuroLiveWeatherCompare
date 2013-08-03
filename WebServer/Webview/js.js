@@ -12,6 +12,8 @@ sortDown[1] = true;
 
 var cities;
 var citiesReversed;
+var countries;
+var countriesReversed;
 var userCitiesReversed;
 var cityDirAsc = true;
 // var countries;
@@ -22,7 +24,7 @@ var valOrders = new Array();
 var valsOriginal = new Array();
 var sortbyCol = 0;
 
-var varNames = ["Temperature", "Rain", "Wind", "Humidity", "Pressure", "Condition"];
+var varNames = ["Temperature / C", "24hr Rain / mm", "Wind / mph", "Humidity / %", "Pressure / mb", "Condition"];
 var ICON_LABELS = [ "Sunny", "Clear", "Partly Cloudy", "Partly Cloudy", "Cloudy", "Rainy",
 		"Snowy", "Foggy", "Thundery" ];
 
@@ -32,8 +34,10 @@ function setup() {
 	cities = window.data[0];
 	citiesReversed = cities.slice();
 	citiesReversed.reverse();
-	// countries = window.data[1];
-	userCities = window.data[varNames.length + 1];
+	countries = window.data[1];
+	countriesReversed = countries.slice();
+	countriesReversed.reverse();
+	userCities = window.data[varNames.length + 2];
 	userCitiesReversed = userCities.slice();
 	userCitiesReversed.reverse();
 	//sort the weather data
@@ -89,12 +93,21 @@ function updateGUI(sort, override){
 	for(var i = 0; i < cities.length; i++) {
 		var accessIndex = cond ? valOrders[wxvar][i] : i;
 		var city = (cityDirAsc || sort || override == 1) ? cities[accessIndex] : citiesReversed[accessIndex];
+		var cntry = (cityDirAsc || sort || override == 1) ? countries[accessIndex] : countriesReversed[accessIndex];
 		//highlight row if user has city in their current collection
 		userRow = (cityDirAsc || sort || override == 1) ? userCities[accessIndex] : userCitiesReversed[accessIndex];
-		var highlight = (userRow == 1) ? "bold" : "normal";
+		var tr_class = "row-" + ((i % 2 === 0) ? "light" : "dark") + " r";
+		if(userRow != 1) {
+			if(userRow == 2) {
+				tr_class += " userCity";
+			} else {
+				tr_class += " nonEuroCity";
+			}
+		}
 		
 		cityNodes[i].innerHTML = city;
-		rowNodes[i].style.fontWeight = highlight;
+		cityNodes[i].setAttribute("title", cntry);
+		rowNodes[i].setAttribute("class", tr_class);
 	}
 		
 	// $('td[class*="country"]').each(function( index ) {
@@ -168,7 +181,7 @@ function sorter(index) {
 	//make data unique so multi-column sorting works on non-unique data
 	valsOriginal[index] = new Array();
 	for(var i = 0; i < cities.length; i++) {
-		valsOriginal[index][i] = parseInt(window.data[(1 + index)][i]) - i/10000;
+		valsOriginal[index][i] = parseInt(window.data[(2 + index)][i]) - i/10000;
 	}
 		
 	valsSorted[index] = valsOriginal[index].slice(); //make copy of array

@@ -40,7 +40,7 @@ require './functions.php';
 	<div id="background">
 <div id="page">
 <div id="header">
-  <?php echo date('D d M Y, H:i', 50 + (int) file_get_contents($API_root ."CP_Solutions/updated.txt")) .' GMT'; ?>
+  <?php echo date('D d M Y, H:i', 70 + (int) file_get_contents($API_root ."updated.txt")) .' GMT'; ?>
 </div>
 
 	<!-- ##### Main ##### -->
@@ -60,7 +60,7 @@ if (!$db) {
 	die('Fatal error');
 }
 //Query database
-$result = mysql_query("SELECT `Name`,`Temperature`,`Rain`,`Wind`,`Humidity`,`Pressure`,`Condition` FROM `$db_table` ORDER BY `Name` ASC");
+$result = mysql_query("SELECT `Name`,`Country`, `Temperature`,`Rain`,`Wind`,`Humidity`,`Pressure`,`Condition`, `isEuro` FROM `$db_table` ORDER BY `Name` ASC");
 if (!$result) {
 // 	die ('Query error: ' . mysql_error());
 	die('Fatal error');
@@ -82,7 +82,9 @@ while($row = mysql_fetch_assoc($result)) {
 		$subCnt++;
 	}
 	$isUserCity = in_array($data[0][$cnt], $userCities);
-	$data[$subCnt][$cnt] = (int) $isUserCity;
+	if($isUserCity) {
+		$data[$subCnt-1][$cnt]++;
+	}
    $cnt++;
 }
 
@@ -133,6 +135,13 @@ echo "</table>";
 
 <!-- ##### Footer ##### -->
 <div id="footer">
+	<div id="note">
+		<p>
+		<b>Note Well</b><br />
+		Cities with purple highlight are your currently-selected cities.<br />
+		Cities in italic and dark-yellow highlight are non-European cities, selected from a tiny sample of major worldwide cities.
+		</p>
+	</div>
 	<div>
 		<a href="#header">Top</a>
 	</div>
@@ -145,7 +154,7 @@ echo "</table>";
 	<div>
 		<span style="font-size:85%">
 			<?php $phpload = roundToDp( microtime(get_as_float) - $scriptbeg, 3 );
-				echo 'Version 0 | Script executed in ' . $phpload . 's'; ?>
+				echo 'Version 1.0 | Script executed in ' . $phpload . 's'; ?>
 		</span>
 	</div>
 </div>

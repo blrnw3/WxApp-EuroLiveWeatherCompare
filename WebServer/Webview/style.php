@@ -142,8 +142,24 @@ th {
 .row-light {
 	background-color: white;
 }
+			
+.userCity {
+	background-color: #ece;
+	font-weight: bold;
+}
+
+.nonEuroCity {
+	background-color: #eeb;
+	font-family: Tahoma;
+	font-style: italic;	
+}
 
 /******************Footer***************************/
+#note {
+	background-color: #ddd;
+	padding: 0.5em;
+}
+
 #footer {
 	font-family: arial;
 	color: #000000;
