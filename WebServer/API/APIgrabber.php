@@ -6,11 +6,15 @@
 Version 2.0
 */
 
+//FOR TESTING
 $debugging = isset($_GET['debugBLR']);
 //FOR PRODUCTION
 $debugging = false;
+//FOR CRON
+if(!$debugging)
+	$debugging = ($argv[1] === "blr");
 
-if(!$debugging && $argv[1] != "blr") {
+if(!$debugging) {
 	//Only allow the cron and debuggers (me) to access the script
 	file_put_contents($API_root."APIForbids.txt", date('r ') . $_SERVER['HTTP_USER_AGENT'] . " " . $_SERVER['REMOTE_ADDR'] . " \r\n", FILE_APPEND);
 	die("Access Forbidden!");
@@ -41,7 +45,7 @@ $iconTypesWWO = array(
 $varNames = array("Temperature", "Rain", "Wind", "Humidity", "Pressure", "Condition", "Updated");
 
 
-require('../config.php');
+require('/home/nwweathe/public_html/wxapp/config.php');
 
 //Connect to SQL server
 $con = mysql_connect("localhost",$db_username,$db_password);
