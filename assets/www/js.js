@@ -39,9 +39,6 @@ var euroOnly = true;
 
 function boot() {
 	userCityNames = getParameterByName('cities');
-	if(userCityNames.length < 1) {
-		userCityNames = "Hampstead,London";
-	}
 	toggleGlobal();
 }
 

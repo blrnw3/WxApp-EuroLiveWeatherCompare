@@ -41,7 +41,7 @@ public class RankAc extends Activity {
 			query += Data.getInstance().getCity(i).replaceAll(" ", "+") + ",";
 		}
 		
-		myWebView.loadUrl("http://nw3weather.co.uk/CP_Solutions/WxApp/" + query);
+		myWebView.loadUrl("file:///android_asset/www/index.html" + query);
 	}
 	
 	
@@ -58,9 +58,6 @@ public class RankAc extends Activity {
 	    
 	    @Override
 	    public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
-	    	view.loadUrl("file:///android_asset/rankSample.htm"); //sample version of the requested web page
-	    	Toast.makeText(getApplicationContext(), "No network connection.\nDisplaying sample data", Toast.LENGTH_LONG).show();
-	    	pb.setVisibility(View.GONE);
 	    }
 
 	    @Override
