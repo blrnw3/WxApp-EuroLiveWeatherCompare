@@ -1,6 +1,5 @@
 package co.uk.wxApp.models;
 
-import java.util.Arrays;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -33,7 +32,7 @@ import android.widget.ProgressBar;
  */
 public class UpdaterService extends Service {
 
-	private final String SERVER_PATH = "http://nw3weather.co.uk/CP_Solutions/";
+	private final String SERVER_PATH = "http://wxapp.nw3weather.co.uk/API/";
 	
 	//set up the binding to the main activity.
 	private final IBinder binder = new MyBinder();

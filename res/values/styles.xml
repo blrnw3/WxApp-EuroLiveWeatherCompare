@@ -1,0 +1,159 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+    <style name="MyImgBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxHeight">50dp</item>
+        <item name="android:maxWidth">50dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">#656</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_weight">.167</item>
+    </style>
+
+    <style name="DetailImgBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxHeight">200dp</item>
+        <item name="android:maxWidth">200dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">#666</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="SettingsAcBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxHeight">50dp</item>
+        <item name="android:maxWidth">50dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">#656</item>
+        <item name="android:layout_margin">2dp</item>
+          <item name="android:contentDescription">@string/settingsBtnDescrip</item>
+    </style>
+
+    <style name="ViewLevelBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxHeight">80dp</item>
+        <item name="android:maxWidth">80dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">#656</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_weight">.333</item>
+    </style>
+
+    <style name="mainBlueBarImgBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxHeight">150dp</item>
+        <item name="android:maxWidth">150dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_weight">.2</item>
+    </style>
+
+    <style name="wxVarBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxHeight">150dp</item>
+        <item name="android:maxWidth">150dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_weight">.2</item>
+        <item name="android:contentDescription">@string/wxvarBtnDescrip</item>
+    </style>
+
+    <style name="mainImgBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxWidth">400dp</item>
+        <item name="android:maxHeight">400dp</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">#8ad</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:layout_alignParentTop">false</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:src">@drawable/cloudy</item>
+    </style>
+
+    <style name="mainRelLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">.33</item>
+    </style>
+
+    <style name="mainTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">Loading...</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="helpTextView">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:text">Loading...</item>
+    </style>
+
+    <style name="DetailText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:text">Data</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:shadowColor">#fff</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <style name="DetailRelLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:layout_weight">0.2</item>
+    </style>
+
+    <style name="HelpLinearLayout">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">70dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="MainLinearLayout">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_weight">0.23</item>
+        <item name="android:weightSum">1.0</item>
+    </style>
+
+    <style name="helpScrollView">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:scrollbars">vertical</item>
+    </style>
+
+</resources>

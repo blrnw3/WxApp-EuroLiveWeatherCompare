@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="bools">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+    
+    <string-array name="UnitsT">
+        <item>C</item>
+        <item>F</item>
+    </string-array>
+    <string-array name="UnitsR">
+        <item>mm (l/sqm)</item>
+        <item>in</item>
+    </string-array>
+    <string-array name="UnitsW">
+        <item>mph</item>
+        <item>knots</item>
+        <item>km/h</item>
+        <item>m/s</item>
+    </string-array>
+    <string-array name="UnitsWvals">
+        <item>mph</item>
+        <item>knt</item>
+        <item>kmh</item>
+        <item>mps</item>
+    </string-array>
+    <string-array name="UnitsP">
+        <item>mb (hPa)</item>
+        <item>inHg</item>
+    </string-array>
+    
+    <string-array name="freqNames">
+        <item>Half-hourly</item>
+        <item>Hourly</item>
+        <item>Every 2hrs</item>
+        <item>Every 3hrs</item>
+    </string-array>
+    <string-array name="freqVals">
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+        <item>180</item>
+    </string-array>
+
+</resources>

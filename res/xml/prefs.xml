@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Units" >
+        <ListPreference 
+            android:defaultValue="true" 
+            android:entries="@array/UnitsT"
+            android:entryValues="@array/bools"
+            android:key="temp"
+            android:title="Temperature" />
+        <ListPreference
+            android:defaultValue="true"
+            android:entries="@array/UnitsR"
+            android:entryValues="@array/bools"
+            android:key="rain"
+            android:title="Rainfall" />
+        <ListPreference
+            android:defaultValue="mph"
+            android:entries="@array/UnitsW"
+            android:entryValues="@array/UnitsWvals"
+            android:key="wind"
+            android:title="Wind Speed" />
+        <ListPreference
+            android:defaultValue="true"
+            android:entries="@array/UnitsP"
+            android:entryValues="@array/bools"
+            android:key="pres"
+            android:title="Pressure" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Updates" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="autoUpdate"
+            android:summary="Allow automatic data retrieval"
+            android:title="Automatic updates" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:dependency="autoUpdate"
+            android:key="wifiOnly"
+            android:summary="Disables automatic updates when roaming"
+            android:title="Auto-update only on Wifi" />
+        <ListPreference
+            android:defaultValue="30"
+            android:dependency="autoUpdate"
+            android:entries="@array/freqNames"
+            android:entryValues="@array/freqVals"
+            android:key="freq"
+            android:title="Update Frequency" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="autoUpdate"
+            android:key="toasts"
+            android:summary="Display update notifications"
+            android:title="Show Toasts" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

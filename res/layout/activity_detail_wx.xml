@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#666" >
+
+    <TextView
+        android:id="@+id/detailHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="London Live"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ddd" />
+
+    <TextView
+        android:id="@+id/detailTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detailHeading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:text="Time, Date"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#aaa" />
+
+    <LinearLayout
+         android:id="@+id/DetailLinLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/detailTime"
+        android:orientation="vertical"
+        android:weightSum="1.2" >
+
+        <RelativeLayout style="@style/DetailRelLayout" >
+
+            <ImageButton
+                android:id="@+id/imageButtonTp"
+                style="@style/DetailImgBtn"
+                android:src="@drawable/thermom8" />
+
+            <TextView
+                android:id="@+id/textTp"
+                style="@style/DetailText" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/DetailRelLayout" >
+
+            <ImageButton
+                android:id="@+id/imageButtonRn"
+                style="@style/DetailImgBtn"
+                android:src="@drawable/rain2" />
+
+            <TextView
+                android:id="@+id/textRn"
+                style="@style/DetailText" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/DetailRelLayout" >
+
+            <ImageButton
+                android:id="@+id/imageButtonWd"
+                style="@style/DetailImgBtn"
+                android:src="@drawable/windy" />
+
+            <TextView
+                android:id="@+id/textWd"
+                style="@style/DetailText" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/DetailRelLayout" >
+
+            <ImageButton
+                android:id="@+id/imageButtonPr"
+                style="@style/DetailImgBtn"
+                android:src="@drawable/pressure2" />
+
+            <TextView
+                android:id="@+id/textPr"
+                style="@style/DetailText" />
+        </RelativeLayout>
+         <RelativeLayout style="@style/DetailRelLayout" >
+
+            <ImageButton
+                android:id="@+id/imageButtonSk"
+                style="@style/DetailImgBtn"
+                android:src="@drawable/sky3" />
+
+            <TextView
+                android:id="@+id/textSk"
+                style="@style/DetailText" />
+        </RelativeLayout>
+         <RelativeLayout style="@style/DetailRelLayout" >
+
+            <ImageButton
+                android:id="@+id/imageButtonRh"
+                style="@style/DetailImgBtn"
+                android:src="@drawable/humidity" />
+
+            <TextView
+                android:id="@+id/textRh"
+                style="@style/DetailText" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

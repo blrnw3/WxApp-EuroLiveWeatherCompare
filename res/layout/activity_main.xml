@@ -1,0 +1,263 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ProgressBar
+        android:id="@+id/progressBarUpdating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:indeterminate="true"
+        android:minHeight="28dp"
+        android:minWidth="28dip" />
+
+    <LinearLayout
+        android:id="@+id/LinLayoutScreen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical"
+        android:weightSum="1.0" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.10"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textViewHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heading"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textViewTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date, Time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#454" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MainLinearLayout"
+            android:layout_height="0dp" >
+
+            <RelativeLayout
+                android:id="@+id/relLayoutNW"
+                style="@style/mainRelLayout" >
+
+                <ImageButton
+                    android:id="@+id/ButtonNW"
+                    style="@style/mainImgBtn" />
+
+                <TextView
+                    android:id="@+id/textViewNW"
+                    style="@style/mainTextView" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayoutN"
+                style="@style/mainRelLayout" >
+
+                <ImageButton
+                    android:id="@+id/ButtonN"
+                    style="@style/mainImgBtn" />
+
+                <TextView
+                    android:id="@+id/textViewN"
+                    style="@style/mainTextView" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayoutNE"
+                style="@style/mainRelLayout" >
+
+                <ImageButton
+                    android:id="@+id/ButtonNE"
+                    style="@style/mainImgBtn"
+                    />
+
+                <TextView
+                    android:id="@+id/textViewNE"
+                    style="@style/mainTextView" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MainLinearLayout"
+            android:layout_height="0dp" >
+
+            <RelativeLayout
+                android:id="@+id/relLayoutW"
+                style="@style/mainRelLayout" >
+
+                <ImageButton
+                    android:id="@+id/ButtonW"
+                    style="@style/mainImgBtn" />
+
+                <TextView
+                    android:id="@+id/textViewW"
+                    style="@style/mainTextView" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayoutC"
+                style="@style/mainRelLayout" >
+
+                <ImageButton
+                    android:id="@+id/ButtonC"
+                    style="@style/mainImgBtn" />
+
+                <TextView
+                    android:id="@+id/textViewC"
+                    style="@style/mainTextView" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayoutE"
+                style="@style/mainRelLayout" >
+
+                <ImageButton
+                    android:id="@+id/ButtonE"
+                    style="@style/mainImgBtn" />
+
+                <TextView
+                    android:id="@+id/textViewE"
+                    style="@style/mainTextView" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MainLinearLayout"
+            android:layout_height="0dp"
+             >
+
+            <RelativeLayout
+                android:id="@+id/relLayoutSW"
+                style="@style/mainRelLayout" >
+
+                <ImageButton
+                    android:id="@+id/ButtonSW"
+                    style="@style/mainImgBtn" />
+
+                <TextView
+                    android:id="@+id/textViewSW"
+                    style="@style/mainTextView" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayoutS"
+                style="@style/mainRelLayout" >
+
+                <ImageButton
+                    android:id="@+id/ButtonS"
+                    style="@style/mainImgBtn" />
+
+                <TextView
+                    android:id="@+id/textViewS"
+                    style="@style/mainTextView" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayoutSE"
+                style="@style/mainRelLayout" >
+
+                <ImageButton
+                    android:id="@+id/ButtonSE"
+                    style="@style/mainImgBtn" />
+
+                <TextView
+                    android:id="@+id/textViewSE"
+                    style="@style/mainTextView" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/varBar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight=".11"
+            android:background="#c656"
+            android:weightSum="1.2" >
+
+            <ImageButton
+                android:id="@+id/imageButtonTp"
+                style="@style/wxVarBtn"
+                android:background="#dcd"
+                android:src="@drawable/thermom8" />
+
+            <ImageButton
+                android:id="@+id/imageButtonRn"
+                style="@style/wxVarBtn"
+                android:src="@drawable/rain2" />
+
+            <ImageButton
+                android:id="@+id/imageButtonWn"
+                style="@style/wxVarBtn"
+                android:src="@drawable/windy" />
+
+            <ImageButton
+                android:id="@+id/imageButtonRh"
+                style="@style/wxVarBtn"
+                android:src="@drawable/humidity" />
+
+            <ImageButton
+                android:id="@+id/imageButtonPr"
+                style="@style/wxVarBtn"
+                android:src="@drawable/pressure2" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSk"
+                style="@style/wxVarBtn"
+                android:layout_marginRight="0dp"
+                android:src="@drawable/sky3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.10"
+            android:background="#548f"
+            android:weightSum="1.0" >
+
+            <ImageButton
+                android:id="@+id/settingsBtn"
+                style="@style/mainBlueBarImgBtn"
+                android:onClick="launchActivity"
+                android:src="@drawable/gear2" />
+
+            <ImageButton
+                android:id="@+id/RankPageBtn"
+                style="@style/mainBlueBarImgBtn"
+                android:onClick="launchActivity"
+                android:src="@drawable/table" />
+
+            <ImageButton
+                android:id="@+id/LocationsBtn2"
+                style="@style/mainBlueBarImgBtn"
+                android:onClick="launchActivity"
+                android:src="@drawable/pin" />
+
+            <ImageButton
+                android:id="@+id/refreshBtn"
+                style="@style/mainBlueBarImgBtn"
+                android:onClick="backgroundDataUpdate"
+                android:src="@drawable/refresh" />
+
+            <ImageButton
+                android:id="@+id/HelpBtn"
+                style="@style/mainBlueBarImgBtn"
+                android:layout_marginRight="0dp"
+                android:onClick="launchActivity"
+                android:src="@drawable/help" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

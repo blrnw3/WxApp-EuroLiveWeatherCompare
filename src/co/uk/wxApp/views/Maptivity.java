@@ -35,7 +35,7 @@ public class Maptivity extends MapActivity {
 	private MapView mapView;
 	
 	//City data
-	private int size = 111;
+	private int size = 250;
 	private String[] names = new String[size];
 	private String[] countries = new String[size];
 	private double[] lats = new double[size];

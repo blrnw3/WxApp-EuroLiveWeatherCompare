@@ -14,7 +14,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DBAdapter {
 	private static final String TABLE_DATA = "live";
-	private static final String TABLE_CITIES = "cities";
+	private static final String TABLE_CITIES = "city";
 	private static final int DATABASE_VERSION = 1;
 
 	private static final String[] KEYS = { "City", "Temperature", "Rain", "Wind", "Humidity", "Pressure",
@@ -80,7 +80,7 @@ public class DBAdapter {
 	 * @return data
 	 */
 	public Cursor getCityInfo(String city) {
-		return db.rawQuery("SELECT Latitude, Longitude FROM cities WHERE City = ?",
+		return db.rawQuery("SELECT Latitude, Longitude FROM " + TABLE_CITIES + " WHERE City = ?",
 				new String[] { city });
 	}
 

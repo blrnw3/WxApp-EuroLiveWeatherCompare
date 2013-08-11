@@ -116,6 +116,16 @@ public class Library {
 			return "Sample Data";
 		}
 		Date d = new Date(mili);
+		int mins = d.getMinutes();
+		int hrs = d.getHours();
+		if(mins > 45) {
+			d.setMinutes(0);
+			d.setHours(hrs+1);
+		} else if(mins < 15) {
+			d.setMinutes(0);
+		} else {
+			d.setMinutes(30);
+		}
 		SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy, HH:mm zzz");
 		return sdf.format(d);
 	}

@@ -33,6 +33,7 @@ public class RankAc extends Activity {
 		
 		WebSettings webSettings = myWebView.getSettings();
 		webSettings.setJavaScriptEnabled(true);
+		webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 		
 		myWebView.setWebViewClient(new MyWebViewClient(myWebView));
 		

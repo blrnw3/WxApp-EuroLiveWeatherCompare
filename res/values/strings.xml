@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Live Wx Compare Eu</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_help">Help</string>
+    <string name="title_activity_main">Live Weather Compare Europe</string>
+    <string name="title_activity_detail_wx">City Detail</string>
+    <string name="title_activity_help">Help | About</string>
+    <string name="title_prefs">Preferences</string>
+    <string name="title_activity_maptivity">City Selector Map</string>
+    <string name="wxvarBtnDescrip">WxVariable</string>
+    <string name="settingsBtnDescrip">Setting</string>
+     <string name="title_activity_rank">All cities - sortable</string>
+    <string name="help_data">
+<![CDATA[
+       <p>
+	<h3>Weather variables</h3>
+		&#8226; Temperature, Daily rainfall total, Wind speed, Relative humidity, Atmospheric pressure, Condition.<br />
+	<h3>Source</h3>
+	&#8226; World Weather Online provides the source data<br />
+	&#8226; Data may at times not reflect reality - this is an unfortuante consequence of using free data<br />
+	<h3>Updating</h3>
+		&#8226; The data source updates every half-hour, at 0 and 30 minutes past the hour<br />
+		&#8226; There is an automatic service to fetch this data at the user-specified interval<br />
+		&#8226; The manual refresh can be used to force the automatic service to check the data source for updates<br />
+		&#8226; Use the manual refresh if the automatic procedure fails or auto-updates are turned off<br />
+		&#8226; Only data for those citites that are selected is retrieved - less than 1KB each update.
+</p>
+       ]]>
+    </string>
+    <string name="help_about">
+<![CDATA[
+       <p>
+	<h3>General</h3>
+		&#8226; This is the second release of the app - Version 2.0 (Aug 2013)<br />
+		&#8226; Please report bugs and send feature suggestions & feedback via the homepage or relevant app store<br />
+		&#8226; <a href="http://wxapp.nw3weather.co.uk/">App homepage</a><br />
+		&#8226; Developed by Ben Lee-Rodgers of <a href="http://nw3weather.co.uk">nw3weather.co.uk</a>.<br />
+		&#8226; Images / icons are either freely available (Creative Commons 0) or were created by me in GIMP.<br />
+	<h3>Future updates</h3>
+		I do not anticipate making any further non-essential updates to this app.<br />
+		If you are a developer and wish to continue development, all code is available in my 
+		<a href="https://github.com/blrnw3/WxApp-EuroLiveWeatherCompare">Github repository</a>
+</p>
+       ]]>
+    </string>
+    <string name="help_navigation">
+<![CDATA[
+       <p>
+	<h3>Home screen</h3>
+		&#8226; Nine cities with their current weather are shown on colour-coded tiles<br />
+		&#8226; Tiles are automatically arranged in a &#39;compass view&#39; according to the cities&#39; coordinates (the most westerly cities are on the left).<br />
+		&#8226; The colour depends on the weather variable and the absolute value displayed (e.g. blue for low temperature, red for high)<br />
+		&#8226; Clicking a tile takes you to the &#39;city detail&#39; (see below)<br />
+		&#8226; To change the weather variable (rain, wind...): swipe left/right or click one of the buttons in the dark purple bar.<br />
+		<br /><b>The blue menu bar:</b><br />
+			&#160; &#160; &#8226; Settings - change units or update preferences<br />
+			&#160; &#160; &#8226; Table - go to the table view of all available cities (see below)<br />
+			&#160; &#160; &#8226; Map Marker - go to the city changer map screen to change the displayed cities (see below)<br />
+			&#160; &#160; &#8226; Refresh - manually check for data (more info in &#39;data&#39; tab)<br />
+			&#160; &#160; &#8226; Help - view help and other basic documentation<br />
+	<h3>City Detail</h3>
+		&#8226; All data for the city is displayed, using the same colour-coding as the home screen<br />
+		&#8226; Swipe left/right to change the displayed city.<br />
+	<h3>Table View</h3>
+		&#8226; View data for all available cities (now 151)<br />
+		&#8226; Click on column headers to sort<br />
+		&#8226; Click on table head to change variable<br />
+		&#8226; Highlighted rows are cities currently in your collection<br />
+		&#8226; Toggle the inclusion of non-European cities on and off.<br />
+		&#8226; Internet connection is required to view live data.<br />
+	<h3>City Changer</h3>
+		&#8226; Over 100 cities around Europe are marked.<br />
+		&#8226; Bonus 15+ global cities too.<br />
+		&#8226; Currently selected cities are in pink<br />
+		&#8226; Click a red marker to select the city for use.
+	</p>
+       ]]>
+    </string>
+</resources>

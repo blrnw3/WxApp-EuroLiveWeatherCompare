@@ -43,7 +43,7 @@ public final class Data {
 
 //	public static final String SETTINGS_FILENAME = "settings";
 	/** Local SQLite database name */
-	public static final String DB_NAME = "wxapp4";
+	public static final String DB_NAME = "wxappv2a1";
 	/** Frequency in minutes used by the web server to update its database */
 	public static final int SERVER_FREQ = 30;
 	
